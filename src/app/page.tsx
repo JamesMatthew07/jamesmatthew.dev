@@ -8,6 +8,7 @@ import {
   Send,
 } from "lucide-react";
 
+import { BrandLogo } from "@/components/site/brand-logo";
 import { DownloadCvButton } from "@/components/site/download-cv-button";
 import { MobileNav } from "@/components/site/mobile-nav";
 import { Reveal } from "@/components/site/reveal";
@@ -279,14 +280,11 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-zinc-50 text-zinc-950">
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/72 text-white backdrop-blur-xl">
-        <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-5 md:px-8">
-          <a href="#top" className="group inline-flex items-center gap-3">
-            <span className="grid size-8 place-items-center rounded-md border border-white/15 bg-white text-sm font-black text-black">
-              JL
-            </span>
-            <span className="hidden text-sm font-semibold tracking-normal sm:inline">{profile.shortName}</span>
+        <div className="mx-auto grid h-16 w-full max-w-7xl grid-cols-[1fr_auto] items-center px-5 md:grid-cols-[1fr_auto_1fr] md:px-8">
+          <a href="#top" className="group inline-flex items-center justify-self-start" aria-label={`${profile.brand} home`}>
+            <BrandLogo />
           </a>
-          <NavigationMenu className="hidden md:flex">
+          <NavigationMenu className="hidden justify-self-center md:flex">
             <NavigationMenuList>
               {navItems.map((item) => (
                 <NavigationMenuItem key={item.href}>
@@ -297,7 +295,7 @@ export default function Home() {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
-          <div className="hidden items-center gap-2 md:flex">
+          <div className="hidden items-center gap-2 justify-self-end md:flex">
             <DownloadCvButton
               label="CV"
               variant="ghost"
@@ -317,7 +315,7 @@ export default function Home() {
               Contact
             </Button>
           </div>
-          <div className="md:hidden">
+          <div className="justify-self-end md:hidden">
             <MobileNav />
           </div>
         </div>

@@ -2,6 +2,7 @@
 
 import { Menu, Send } from "lucide-react";
 
+import { BrandLogo } from "@/components/site/brand-logo";
 import { DownloadCvButton } from "@/components/site/download-cv-button";
 import { Button } from "@/components/ui/button";
 import {
@@ -21,7 +22,9 @@ export function MobileNav() {
       </SheetTrigger>
       <SheetContent side="right" className="w-[310px] border-white/10 bg-black text-white">
         <SheetHeader>
-          <SheetTitle className="text-left text-base text-white">{profile.shortName}</SheetTitle>
+          <SheetTitle className="text-left text-base text-white">
+            <BrandLogo />
+          </SheetTitle>
         </SheetHeader>
         <nav className="mt-8 grid gap-2">
           {navItems.map((item) => (

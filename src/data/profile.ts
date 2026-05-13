@@ -25,6 +25,7 @@ export const navItems = [
 export const profile = {
   name: "James Matthew Llanos",
   shortName: "James Matthew",
+  brand: "james.dev",
   role: "AI Engineer",
   email: "llanosjamesmatthew30@gmail.com",
   linkedIn: "https://www.linkedin.com/in/jamesmatthewdev/",
@@ -34,7 +35,7 @@ export const profile = {
   hero:
     "AI Engineer building production systems, agents, and automation that move real workflows.",
   summary:
-    "Software engineer focused on production-grade AI systems, not experiments. I design AI agents, ML pipelines, backend automations, and product interfaces that turn messy operational work into reliable software.",
+    "AI engineer focused on production-grade systems, not experiments. I design AI agents, ML pipelines, backend automations, and product interfaces that turn messy operational work into reliable software.",
   quickStats: [
     "AI Engineering",
     "Agent Orchestration",
